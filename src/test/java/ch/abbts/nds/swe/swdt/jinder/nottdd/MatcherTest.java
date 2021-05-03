@@ -23,8 +23,18 @@ public class MatcherTest {
   @Test
   @DisplayName("Matching candidate to profile should work if skills match")
   public void matchNone() {
-    Candidate c = () -> new String[]{"maths", "software-design"};
-    Profile p = () -> new String[]{"maths", "algebra"};
+    Candidate c = new Candidate() {
+      @Override
+      public String[] getSkills() {
+        return new String[]{"maths", "software-design"};
+      };
+    };
+    Profile p = new Profile() {
+      @Override
+      public String[] getSkills() {
+        return new String[]{"maths", "algebra"};
+      };
+    };
     assertFalse(Arrays.asList(matcher.isMatch(c, p)).isEmpty(),
         "Intersection should be empty");
   }
@@ -40,7 +50,7 @@ public class MatcherTest {
   }
 
   @Test
-  @DisplayName("Matching candidate to profile should work if two skills match")
+  @DisplayName("Matching candidate to profile should work if two skills match, order must be ignored")
   public void matchTwo() {
     Candidate c = () -> new String[]{"maths", "software-design", "algebra"};
     Profile p = () -> new String[]{"maths", "algebra", "physics"};
