@@ -21,22 +21,29 @@ public class MatcherTest {
   }
 
   @Test
-  @DisplayName("Matching candidate to profile should work if skills match")
+  @DisplayName("If no skills match, the result must be empty")
   public void matchNone() {
-    Candidate c = new Candidate() {
+    // 1. Create new Candidate
+    // Java can run anonymous classes like
+    /* Class c = new Class() {
       @Override
       public String[] getSkills() {
         return new String[]{"maths", "software-design"};
       };
-    };
-    Profile p = new Profile() {
-      @Override
-      public String[] getSkills() {
-        return new String[]{"maths", "algebra"};
-      };
-    };
-    assertFalse(Arrays.asList(matcher.isMatch(c, p)).isEmpty(),
-        "Intersection should be empty");
+    };*/
+
+    // 2. Create a Profile
+    // Profile p = ?
+
+    // 3. Calculate the actual result
+    // matcher.isMatch(candidate, profile);
+
+    // 4. Make an assertion - an expectations
+    // use assertFalse from the package
+    // import static org.junit.jupiter.api.Assertions.assertFalse;
+    // it can be used like assertFalse(Arrays.asList(actualResult).isEmpty(),
+    // "Array should be empty");
+    assertFalse(true);
   }
 
   @Test
