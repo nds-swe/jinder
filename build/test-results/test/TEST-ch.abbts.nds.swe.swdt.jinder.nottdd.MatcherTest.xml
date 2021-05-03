@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.abbts.nds.swe.swdt.jinder.nottdd.MatcherTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-05-03T18:51:02" hostname="C02Y91DDJGH6" time="0.029">
+  <properties/>
+  <testcase name="Matching candidate to profile should work if skills match" classname="ch.abbts.nds.swe.swdt.jinder.nottdd.MatcherTest" time="0.019"/>
+  <testcase name="Matching candidate to profile should work if two skills match" classname="ch.abbts.nds.swe.swdt.jinder.nottdd.MatcherTest" time="0.006"/>
+  <testcase name="Matching candidate to profile should work if skills match" classname="ch.abbts.nds.swe.swdt.jinder.nottdd.MatcherTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
