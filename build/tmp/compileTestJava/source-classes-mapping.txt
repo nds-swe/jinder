@@ -1,2 +1,0 @@
-ch/abbts/nds/swe/swdt/jinder/nottdd/MatcherTest.java
- ch.abbts.nds.swe.swdt.jinder.nottdd.MatcherTest
