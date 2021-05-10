@@ -1,10 +1,12 @@
-name:
+name: Unit Test
 
 on:
   pull_request:
     branches:
       - main
 jobs:
+
+  # this runs tests with cache, is faster
   test:
     runs-on: ubuntu-latest
     steps:
@@ -12,14 +14,15 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Run tests with cache # this runs tests with cache, is faster
+      - name: Run tests with cache
         uses: eskatos/gradle-command-action@v1
         with:
           arguments: test
           wrapper-cache-enabled: true
           dependencies-cache-enabled: true
           configuration-cache-enabled: true
-          
+
+  # this runs tests without cache, is slower
   test-bare:
     runs-on: ubuntu-latest
     steps:
@@ -27,5 +30,5 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Run tests # this runs tests without cache, is slower
+      - name: Run tests
         run: ./gradlew test
