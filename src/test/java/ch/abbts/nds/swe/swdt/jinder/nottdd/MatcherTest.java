@@ -23,20 +23,7 @@ public class MatcherTest {
   @Test
   @DisplayName("If no skills match, the result must be empty")
   public void matchNone() {
-    Candidate c = new Candidate() {
-      @Override
-      public String[] getSkills() {
-        return new String[]{"maths", "software-design"};
-      };
-    };
-    Profile p = new Profile() {
-      @Override
-      public String[] getSkills() {
-        return new String[]{"maths", "algebra"};
-      };
-    };
-    assertFalse(Arrays.asList(matcher.isMatch(c, p)).isEmpty(),
-        "Intersection should be empty");
+    assertFalse(true);
   }
 
   @Test
